@@ -1,0 +1,22 @@
+version: "2.1"
+services:
+  heimdall:
+    image: linuxserver/heimdall:2.5.7
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Tehran
+    volumes:
+      - ./config:/config
+    ports:
+      - 8080:80
+      #- 443:443
+    restart: unless-stopped
+    networks:
+      containers:
+        ipv4_address: 192.168.25.106
+
+networks:
+  containers:
+    external: true

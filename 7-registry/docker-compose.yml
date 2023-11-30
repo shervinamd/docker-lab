@@ -1,0 +1,18 @@
+version: '3'
+services:
+  registry:
+    image: registry:2
+    container_name: registry
+    ports:
+      - 127.0.0.1:5000:5000
+    volumes:
+      - $PWD/config.yml:/etc/docker/registry/config.yml
+      - ./registry-data:/var/lib/registry
+    restart: always
+    networks:
+      containers:
+        ipv4_address: 192.168.25.107
+
+networks:
+  containers:
+    external: true
