@@ -1,0 +1,7 @@
+/3-wordpress-nginx/wp-data/*
+/3-wordpress-nginx/db-data/*
+/4-gitea/gitea-data/*
+/4-gitea/postgres-data/*
+/5-grafana/data/*
+/6-heimdall/config/*
+/7-registry/registry-data/*
