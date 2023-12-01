@@ -1,6 +1,6 @@
 # flaskapp
 
-A sample Flask API
+### A sample Flask API
 
 Build the app
 ```bash
