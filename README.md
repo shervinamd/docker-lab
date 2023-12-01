@@ -4,13 +4,13 @@
 
 This repository contains multiple projects:
 
-1. **Flask App (Single-stage build)**
-2. **Golang App (Multi-stage build)**
-3. **Wordpress + Postgres + NginX**
-4. **Gitea Repository**
-5. **Grafana**
-6. **Heimdall Dashboard**
-7. **Docker Registry (Distribution)**
+1. **[Flask App](1-flask-app) (Single-stage build)**
+2. **[Golang App](2-golang-app) (Multi-stage build)**
+3. **[Wordpress + MySQL](3-wordpress-mysql)**
+4. **[Gitea Repository](4-gitea)**
+5. **[Grafana](5-grafana)**
+6. **[Heimdall Dashboard](6-heimdall)**
+7. **[Docker Registry](7-registry) (Distribution)**
 
 
 
