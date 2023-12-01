@@ -1,0 +1,37 @@
+version: '3'
+services:
+  wordpress:
+    image: wordpress:6.4-apache
+    container_name: wp
+    volumes:
+      - ./wp-data:/var/www/html
+    ports:
+      - 8000:80
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+      containers:
+        ipv4_address: 192.168.25.101
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7
+    container_name: wp-db
+    volumes:
+      - ./db-data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    networks:
+      containers:
+        ipv4_address: 192.168.25.102
+
+networks:
+  containers:
+    external: true
